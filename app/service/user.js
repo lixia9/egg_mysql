@@ -6,6 +6,7 @@ class UserService extends Service {
     const userList = await this.app.mysql.select('account');
     return userList;
   }
+
   async addUser(userInfo) {
     const result = await this.app.mysql.insert('account',userInfo);
     return result;

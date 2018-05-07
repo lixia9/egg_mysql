@@ -1,0 +1,9 @@
+
+
+type User {
+  id: ID
+  userName: String
+  phoneNumber: String
+  userName: String
+}
+

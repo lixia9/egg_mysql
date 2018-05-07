@@ -1,0 +1,7 @@
+
+
+type Mutation {
+
+ 
+  user (id: ID!): User 
+}

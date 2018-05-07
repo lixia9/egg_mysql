@@ -6,8 +6,9 @@ const Controller = require('egg').Controller;
 
 class HomeController extends Controller {
   async getAllUser() {
-    this.ctx.status = 200;
-    this.ctx.body = await this.ctx.service.user.getAllUser();
+    const { ctx } = this;
+    ctx.status = 200;
+    ctx.body = await ctx.model.User.findAll();
   }
 }
 
