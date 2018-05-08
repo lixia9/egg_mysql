@@ -5,5 +5,8 @@ type User {
   userName: String
   phoneNumber: String
   userName: String
+  nickName: String,
+  email: String,
+  
 }
 

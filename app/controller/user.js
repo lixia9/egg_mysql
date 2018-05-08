@@ -10,6 +10,11 @@ class HomeController extends Controller {
     ctx.status = 200;
     ctx.body = await ctx.model.User.findAll();
   }
+  async index() {
+    const { ctx } = this;
+    ctx.status = 200;
+    ctx.body = await ctx.model.User.findAll();
+  }
 }
 
 module.exports = HomeController;

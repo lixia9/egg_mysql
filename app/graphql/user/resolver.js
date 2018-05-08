@@ -2,9 +2,15 @@
 
 module.exports = {
   Query: {
-    user(root, {}, ctx) {
-      return ctx.connector.user.fetch();
+    getUserById(root, {id}, ctx) {
+      return ctx.connector.user.fetchById(id);
+    },
+    getUserByIds(root, {ids}, ctx) {
+      return ctx.connector.user.fetchByIds(ids);
     },
     
+    getAllUser(root, {}, ctx) {
+      return ctx.connector.user.fetchAll();
+    },
   },
 };
