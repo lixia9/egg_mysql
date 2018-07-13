@@ -1,6 +1,9 @@
 
 type Query {
-  getUserById(id:ID!): User
+  #通过ID获取单个的user
+  getUserById(id:ID!): User 
+  #通过ID数组获取多个user
   getUserByIds(ids:[ID]!) : [User]
+  #获取所有的user
   getAllUser:[User]
 }

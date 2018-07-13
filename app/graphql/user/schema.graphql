@@ -1,12 +1,12 @@
 
-
+#用户的实体类
 type User {
   id: ID
+  password:String
   userName: String
   phoneNumber: String
-  userName: String
-  nickName: String,
-  email: String,
+  email: String
+  nickName: String
   
 }
 

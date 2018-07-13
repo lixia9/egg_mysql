@@ -8,7 +8,16 @@ class UserConnector {
     this.loader = new DataLoader(this.fetch.bind(this));
   }
 
-
+  create(User){
+    return this.ctx.app.model.User.create(User);
+  }
+  updateUser(User){
+     this.ctx.app.model.User.update(User,{where:{id:User.id}});
+     return User
+  }
+  deleteUser(id){
+    return  this.ctx.app.model.User.destroy({where:id});
+  }
   fetch(ids) {
     const users = this.ctx.app.model.User.findAll({
       where: {

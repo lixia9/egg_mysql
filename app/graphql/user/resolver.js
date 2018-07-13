@@ -13,4 +13,16 @@ module.exports = {
       return ctx.connector.user.fetchAll();
     },
   },
+  Mutation:{
+
+    createUser(root, User, ctx) {
+      return ctx.connector.user.create(User);
+    },
+    updateUser(root, User, ctx) {
+      return ctx.connector.user.updateUser(User);
+    },
+    deleteUser(root, id, ctx) {
+      return ctx.connector.user.deleteUser(id);
+    },
+  }
 };

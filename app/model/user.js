@@ -1,6 +1,7 @@
 module.exports = (app) => {
   const { STRING } = app.Sequelize;
-
+ 
+  
   const User = app.model.define('account', {
     "userName": STRING(30),
     "password": STRING(30),
