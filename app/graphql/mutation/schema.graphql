@@ -1,0 +1,8 @@
+
+
+type Mutation {
+# User
+  createUser (userName: String!,password: String!,phoneNumber: String!,nickName: String!,email: String!): User
+  updateUser (userName: String,password: String,phoneNumber: String,nickName: String,email: String,id:ID!,): User
+  deleteUser (id:ID!): User
+}
